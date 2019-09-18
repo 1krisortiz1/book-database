@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   resources :books
   resources :authors
   resources :readers
-root 'welcome#home'
-  
-get 'welcome/home', to: 'welcome#home'
-get 'welcome/about', to: 'welcome#about'
+
+
+  root 'welcome#home'
+  get 'about', to: 'welcome#about'
 
 end
