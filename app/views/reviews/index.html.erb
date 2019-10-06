@@ -1,7 +1,10 @@
 <h1>reviews index page</h1>
 
 <% @reviews.each do |r| %>
-  <%= r.book.title %>
-  <%= r.title %> - <%= r.stars %>
+  <h2><%= link_to r.book.title, book_path(r.id) %> - <%= r.title %></h2>
+  <div>
+    <p>Reviewed by: <%= r.reader.username %> - <%= r.stars %> Stars!</p>
+    <p><%= r.content %></p>
+  </div>
 
 <% end %>
