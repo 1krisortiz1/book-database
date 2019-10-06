@@ -1,0 +1,22 @@
+<h1>Share your review for <%= @review.book.title %> by <%= @book.author.name %></h1>
+
+<p><%= flash[:error] %></p>
+<%= form_for(@review) do |r| %>
+
+  <p>
+    <%= r.label :title %>
+    <%= r.text_field :title %>
+  </p>
+  <p>
+    <%= r.label :content %>
+    <%= r.text_area :content %>
+  </p>
+  <p>
+    <%= r.label :stars %>
+    <%= r.number_field :stars, include_blank: true, min: 1, max: 5 %>
+  </p>
+  <%= r.hidden_field :book_id %>
+
+  <%= r.submit "Create review" %>
+
+<% end %>

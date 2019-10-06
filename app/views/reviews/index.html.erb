@@ -1,0 +1,7 @@
+<h1>reviews index page</h1>
+
+<% @reviews.each do |r| %>
+  <%= r.book.title %>
+  <%= r.title %> - <%= r.stars %>
+
+<% end %>

@@ -1,0 +1,8 @@
+<h1>Books</h1>
+<ol>
+  <% @book.each do |b| %>
+      <li><%= b.title %> <%= link_to "Review this book", new_book_review_path(b.id) %> </li>
+      <%= b.genre %> - Written by:
+      <%= b.author.name %>
+  <% end %>
+</ol>
