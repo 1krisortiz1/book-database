@@ -13,6 +13,7 @@ class WelcomeController < ApplicationController
       session[:reader_id] = @reader.id
       redirect_to reader_path(@reader)
     else
+      flash[:error] = "Information incorrect, try again"
       redirect_to login_path
     end
   end
