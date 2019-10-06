@@ -1,5 +1,6 @@
 <h1>Log In!</h1>
 
+<p><%= flash[:error] %></p>
 <%= form_for(:reader) do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
