@@ -1,2 +1,4 @@
-<h1><%= @review.book.title %></h1> <h3>By: <%= @review.book.author.name %><br/>
-<%= @review.stars %> Stars</h3>
+<h1><%= @review.book.title %></h1>
+<h2>By: <%= @review.book.author.name %></h2><br/>
+<h3>Reviewed by: <%= @review.reader.username %> - <%= @review.stars %> Stars</h3>
+<%= @review.content %></br>
