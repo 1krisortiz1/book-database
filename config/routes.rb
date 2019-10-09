@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :reviews
   resources :books do
-    resources :reviews, only: [:new, :index]
+    resources :reviews, only: [:new, :index, :show]
   end
   resources :authors
   resources :readers
