@@ -4,7 +4,7 @@ class Reader < ApplicationRecord
 
   has_many :books
 
-  validates :username, uniqueness: true, presence: true
+  validates :username, uniqueness: true, presence: true, length: { minimum: { minimum: 3, maximum: 15 }
 
   has_secure_password
 end
