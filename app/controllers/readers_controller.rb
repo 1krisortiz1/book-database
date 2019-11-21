@@ -20,6 +20,7 @@ class ReadersController < ApplicationController
 
   def show
     @reader = Reader.find_by_id(params[:id])
+    
   end
 
   private
